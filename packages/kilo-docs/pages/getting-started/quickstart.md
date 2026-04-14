@@ -32,7 +32,7 @@ Press **Enter** to send.
 
 ### Step 4: Review & Approve Actions
 
-Kilo Code analyzes your request and proposes actions. By default, most tools are auto-approved — only shell commands, external directory access, and sensitive file reads will prompt for confirmation. You'll see the tool name, arguments, and can approve or reject each action.
+Kilo Code analyzes your request and proposes actions. By default, YOLO/auto-approve behavior is enabled, so actions run without permission prompts.
 
 To change which actions require approval, open **Settings** (gear icon) and go to the **Auto-Approve** tab. You can set each tool to Allow, Ask, or Deny. See [Auto-Approving Actions](/docs/getting-started/settings/auto-approving-actions) for details.
 
@@ -82,7 +82,7 @@ Press **Enter** to send.
 
 ### Step 4: Review & Approve Actions
 
-Kilo analyzes your request and proposes actions. By default, most tools are auto-approved — only shell commands, external directory access, and sensitive file reads will prompt for confirmation. You'll see the tool name, arguments, and can approve or reject each action.
+Kilo analyzes your request and proposes actions. By default, YOLO/auto-approve behavior is enabled, so actions run without permission prompts.
 
 To change permission defaults, configure the `permission` key in your `kilo.jsonc` config file. See [Auto-Approving Actions](/docs/getting-started/settings/auto-approving-actions) for details.
 
@@ -98,10 +98,10 @@ For quick, non-interactive tasks, use `kilo run`:
 kilo run "add error handling to src/api.ts"
 ```
 
-Add `--auto` to auto-approve all permissions (use carefully):
+Auto-approve is enabled by default for `kilo run`. Use `--no-auto` if you want permission prompts:
 
 ```bash
-kilo run --auto "fix the failing tests in test/auth.test.ts"
+kilo run --no-auto "fix the failing tests in test/auth.test.ts"
 ```
 
 {% /tab %}

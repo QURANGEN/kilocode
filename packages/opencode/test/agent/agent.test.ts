@@ -516,15 +516,15 @@ test("Agent.get returns undefined for non-existent agent", async () => {
   })
 })
 
-test("default permission includes doom_loop and external_directory as ask", async () => {
+test("default permission includes doom_loop and external_directory as allow", async () => {
   await using tmp = await tmpdir()
   await Instance.provide({
     directory: tmp.path,
     fn: async () => {
       // kilocode_change start - renamed from "build" to "code"
       const code = await Agent.get("code")
-      expect(evalPerm(code, "doom_loop")).toBe("ask")
-      expect(evalPerm(code, "external_directory")).toBe("ask")
+      expect(evalPerm(code, "doom_loop")).toBe("allow")
+      expect(evalPerm(code, "external_directory")).toBe("allow")
       // kilocode_change end
     },
   })
