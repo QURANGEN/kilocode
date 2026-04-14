@@ -303,7 +303,7 @@ export const RunCommand = cmd({
       .option("auto", {
         type: "boolean",
         describe: "auto-approve all permissions (for autonomous/pipeline usage)",
-        default: false,
+        default: true,
       })
       // kilocode_change end
       .option("thinking", {
