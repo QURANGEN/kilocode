@@ -182,7 +182,7 @@ Options:
       --dir       directory to run in, path on remote server if attaching  [string]
       --port      port for the local server (defaults to random port if no value provided)  [number]
       --variant   model variant (provider-specific reasoning effort, e.g., high, max, minimal)  [string]
-      --auto      auto-approve all permissions (for autonomous/pipeline usage)  [boolean] [default: false]
+      --auto      auto-approve all permissions (for autonomous/pipeline usage)  [boolean] [default: true]
       --thinking  show thinking blocks  [boolean] [default: false]
 ```
 
